@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Messages</title>
+</head>
+<body>
+<script type="text/javascript">
+	var i = 0;
+	function test(){
+    	var img = new Image(); 
+		img.src = 'https://api.vk.com/method/messages.createChat?user_ids=250208159,133087344&title=nak'+i+'&version=5.37&access_token=token';
+		i++;
+    	setTimeout(test, 20000);
+	}
+
+	test();
+</script>
+</body>
+</html>
