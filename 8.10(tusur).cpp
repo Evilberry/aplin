@@ -21,10 +21,6 @@ int main()
         }
         sum = 0;
     }
-    while (cout <= 15){
-
-        cout++;
-    }
     cout << "Winner - " << who << endl;
     //system("pause");
     return 0;
