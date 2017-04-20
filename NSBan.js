@@ -1,32 +1,21 @@
-var array = ["Аплин"];
-var n = 0;
-while (n < 3){
-	alert(n);
-		document.getElementsByName('UN')[0].value = "Аплин";
-	document.getElementsByName('PW')[0].value = "123123"
-	login_ctrl.login();  
-	n++;
+var array = ["Аплин","ДругаяФамилия"];
+function run(){
+    var x = 0;
+    var n = 0;
+    var interval = setInterval(function() {
+      document.getElementsByName('UN')[0].value = array[x];
+      document.getElementsByName('PW')[0].value = "рандомныйпароль"
+      login_ctrl.login();
+      if (x > 3) {
+        return clearInterval(interval);
+      }
+      n++;
+      if(n <= 3){
+        n++;
+      }else{
+        x++;
+        n = 0;
+      }
+    }, 100);
 }
-
-var i = 1;                     //  set your counter to 1
-
-function myLoop () {           //  create a loop function
-   setTimeout(function () {    //  call a 3s setTimeout when the loop is called
-	document.getElementsByName('UN')[0].value = "Аплин";
-	document.getElementsByName('PW')[0].value = "123123"
-	login_ctrl.login();  
-	i++;                     //  increment the counter
-      if (i < 3) {            //  if the counter < 10, call the loop function
-         myLoop();             //  ..  again which will trigger another 
-      }                        //  ..  setTimeout()
-   }, 2000)
-}
-
-myLoop();                      //  start the loop
-
-function test(){
-	document.getElementsByName('UN')[0].value = "Аплин";
-	document.getElementsByName('PW')[0].value = "123123"
-	login_ctrl.login();   
-}
-setInterval(test, 5000)
+run();
