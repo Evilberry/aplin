@@ -27,7 +27,7 @@ int check_user_input(int user_answer) {
                 }
                 if(user_answer == 2 && bot_answer == 1){
                     check(0);
-                    return 1;
+                    return 0;
                 }
                 if(user_answer == 2 && bot_answer == 3){
                     check(1);
