@@ -56,7 +56,6 @@ int main() {
     setlocale(LC_ALL, "Russian");
     while(1){
         int end;
-        //printf("%s","Ваш счет: ", user_score, " Счет компьютера: ", bot_score, "\n");
         printf("Ваш счет: %d Счет компьютера: %d \n", user_score, bot_score);
         printf("Сделай ход \n1. Камень\n2. Ножницы\n3. Бумага\n");
         scanf("%i", &x);
